@@ -1,0 +1,22 @@
+{
+  "name": "web-components",
+  "version": "1.0.0",
+  "description": "Practice vanilla javascript web components feature.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonRofe/web_components.git"
+  },
+  "keywords": [
+    "web-components"
+  ],
+  "author": "Ron Rofe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RonRofe/web_components/issues"
+  },
+  "homepage": "https://github.com/RonRofe/web_components#readme"
+}
