@@ -1,1 +1,3 @@
-alert("hello")
+import '../styles.scss';
+
+alert("hello world!")
