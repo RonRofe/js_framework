@@ -14,9 +14,17 @@ module.exports = merge(common, {
         rules: [
             // Load SCSS into JS as CSS and inject style into the DOM
             {
-                test: /\.scss$/,
-                exclude: /(node_modules)/,
+                include: [ path.resolve(__dirname, './src/styles.scss') ],
                 use: [ 'style-loader', 'css-loader', 'sass-loader' ],
+            },
+            // Load SCSS into JS as CSS
+            {
+                test: /\.scss$/,
+                exclude: [
+                    /(node_modules)/,
+                    path.resolve(__dirname, './src/styles.scss'),
+                ],
+                use: [ 'css-loader', 'sass-loader' ],
             },
         ],
     },

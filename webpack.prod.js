@@ -16,8 +16,17 @@ module.exports = merge(common, {
         rules: [
             // Load SCSS into JS as CSS and inject style into seperated files
             {
-                test: /\.scss$/,
+                include: [ path.resolve(__dirname, './src/styles.scss') ],
                 use: [ MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader' ],
+            },
+            // Load SCSS into JS as CSS
+            {
+                test: /\.scss$/,
+                exclude: [
+                    /(node_modules)/,
+                    path.resolve(__dirname, './src/styles.scss'),
+                ],
+                use: [ 'css-loader', 'postcss-loader', 'sass-loader' ],
             },
             // Loader to use babel for new js features browser adoption
             {

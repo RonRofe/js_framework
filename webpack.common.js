@@ -3,13 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './src/js/index.js',
+        index: './src/app/modules/index.module.js',
     },
     module: {
         rules: [
             // Load images, svgs, etc. correctly from the dist in html files + minimazation
             {
                 test: /\.html$/,
+                exclude: /(node_modules)/,
                 use: [ 'html-loader' ],
             },
             // Transfer all assets files to the dist folder
@@ -35,6 +36,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html',
+            chunks: [ 'index' ],
         }),
+        // ... More pages
     ],
 };
