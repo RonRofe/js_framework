@@ -24,12 +24,34 @@ module.exports = merge(common, {
                     /(node_modules)/,
                     path.resolve(__dirname, './src/styles.scss'),
                 ],
-                use: [ 'css-loader', 'sass-loader' ],
+                use: [ 'css-loader', {
+                    loader: 'sass-loader',
+                    options: {
+                        prependData: '@import "src/styles.scss";',
+                    }
+                } ],
             },
         ],
     },
     devServer: {
         port: 4400,
         contentBase: '/',
+        stats: 'errors-only',
+        // stats: {
+        //     colors: true,
+        //     hash: false,
+        //     version: false,
+        //     timings: false,
+        //     assets: false,
+        //     chunks: false,
+        //     modules: false,
+        //     reasons: false,
+        //     children: false,
+        //     source: false,
+        //     errors: true,
+        //     errorDetails: false,
+        //     warnings: true,
+        //     publicPath: false
+        // },
     },
 });

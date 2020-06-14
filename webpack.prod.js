@@ -26,7 +26,12 @@ module.exports = merge(common, {
                     /(node_modules)/,
                     path.resolve(__dirname, './src/styles.scss'),
                 ],
-                use: [ 'css-loader', 'postcss-loader', 'sass-loader' ],
+                use: [ 'css-loader', 'postcss-loader', {
+                    loader: 'sass-loader',
+                    options: {
+                        prependData: '@import "src/styles.scss";',
+                    }
+                } ],
             },
             // Loader to use babel for new js features browser adoption
             {
