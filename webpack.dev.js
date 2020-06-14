@@ -28,7 +28,7 @@ module.exports = merge(common, {
                     loader: 'sass-loader',
                     options: {
                         prependData: '@import "src/styles.scss";',
-                    }
+                    },
                 } ],
             },
         ],

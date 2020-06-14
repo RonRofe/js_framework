@@ -1,7 +1,66 @@
-$purple: #FF00FF;
+* {
+    font-family: 'Open Sans';
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+img {
+    vertical-align: middle;
+}
+
+p {
+    margin: 0;
+}
 
 h1 {
-    color: #0000FF;
-    font-weight: 100;
-    background-color: rgb(243, 158, 243);
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+
+h5 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+mark {
+    padding: 4px;
+}
+
+textarea {
+    outline: none;
+}
+
+button {
+    padding: 0;
 }
